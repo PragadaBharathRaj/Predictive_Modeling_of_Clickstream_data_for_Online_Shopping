@@ -25,3 +25,10 @@ Phase 6: Conclusion and Recommendations
 ● Summarize findings and insights gained from the comparative analysis.
 ● Provide recommendations on the most suitable algorithms for the dataset and problem
 type.
+
+
+- Model deployment:
+
+The Decision Tree Regressor and KNN Classifier has been downloaded to a joblib file and deployed using a AWS EC2 instance with a free tier AWS Educational account:
+
+URL: http://18.191.32.75:5000/

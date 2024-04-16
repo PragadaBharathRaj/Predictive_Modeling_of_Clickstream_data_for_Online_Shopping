@@ -52,7 +52,17 @@ def predict_classification():
     # Make prediction using the classification model
     prediction = classification_model.predict([[feature1, feature2,feature3,feature4,feature5,feature6]])  # Adjust based on your features
     # print(prediction)
-    return jsonify({'prediction': int(prediction[0])})
+    if  int(prediction[0]) ==0:
+        prediction_label = 'Budget'
+    elif  int(prediction[0]) == 1:
+        prediction_label = 'Value'
+    elif int(prediction[0]==2):
+        prediction_label = 'Average'
+    else:
+        prediction_label = 'Premium'
+
+    return jsonify({'prediction': prediction_label})
+    
 
 if __name__ == '__main__':
     app.run(debug=True)
